@@ -182,7 +182,7 @@
       dateClicked: function(e) {
         moment.locale(this.globalLocale.locale());
         var element = e.originalTarget ? e.originalTarget : e.toElement;
-        scope.datePicking = moment(this.datePicking).startOf('month').add(+element.textContent - 1 ,"days");
+        this.datePicking = moment(this.datePicking).startOf('month').add(+element.textContent - 1 ,"days");
       },
       datePicking: this.globalLocale,
       days_of_the_week: [],
